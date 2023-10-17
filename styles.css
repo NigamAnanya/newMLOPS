@@ -17,6 +17,8 @@ body {
     background-size: cover;
     -webkit-animation: slidein 25s;
     animation: slidein 25s;
+    background-attachment: fixed;
+    background-position: center;
 
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
@@ -59,6 +61,8 @@ html {
 
 
 
+
+
 .content {
     position: relative;
   }
@@ -80,37 +84,38 @@ html {
     color: #3a2ec3;
     animation: animate 4s ease-in-out infinite;
   }
-  
-  @keyframes animate {
+ .logo {
+    display: none;
+}
+
+
+@keyframes animate {
+
     0%,
     100% {
-      clip-path: polygon(
-        0% 45%,
-        16% 44%,
-        33% 50%,
-        54% 60%,
-        70% 61%,
-        84% 59%,
-        100% 52%,
-        100% 100%,
-        0% 100%
-      );
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
     }
-  
+
     50% {
-      clip-path: polygon(
-        0% 60%,
-        15% 65%,
-        34% 66%,
-        51% 62%,
-        67% 50%,
-        84% 45%,
-        100% 46%,
-        100% 100%,
-        0% 100%
-      );
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
     }
-  }
+}
 
 .center {
     display: flex;
@@ -248,13 +253,15 @@ html {
     .navbar {
         position: fixed;
         bottom: 0;
-        left: 0;  
+        left: 0;
         width: 100%;
-       
+    
+
     }
+
     body {
-        padding-bottom: 5rem; 
-      }
+        padding-bottom: 5rem;
+    }
 
     .content h2 {
         color: #fff;
@@ -262,24 +269,30 @@ html {
         margin-left: 120px;
         position: absolute;
         transform: translate(-50%, -50%);
-        
-      }
+
+    }
+
     .logo {
         display: none;
     }
 
     .navbar-nav {
         flex-direction: row;
+        justify-content: space-around;
+       
     }
+
     .navbar::-webkit-scrollbar {
         display: none;
-      }
-      html::-webkit-scrollbar{
+    }
+
+    html::-webkit-scrollbar {
         display: none;
-      }
+    }
 
     .nav-link {
         justify-content: center;
+       
     }
 
     main {
@@ -295,7 +308,7 @@ html {
         height: 100vh;
     }
 
-    
+
     .navbar:hover {
         width: 16rem;
     }
@@ -313,7 +326,7 @@ html {
     }
 }
 
-.dark {
+/* .dark {
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
@@ -332,7 +345,7 @@ html {
     --text-secondary: #35535c;
     --bg-primary: #fdf6e3;
     --bg-secondary: #f5e5b8;
-}
+} */
 
 .theme-icon {
     display: none;
@@ -349,3 +362,71 @@ html {
 .solar #solarIcon {
     display: block;
 }
+/* Modal styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  /* Modal content */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #img-modal-btn {
+    background-color: #1c73dd;
+    padding: 20px 30px; 
+    border: none;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 50px;
+    font-size: 19px;
+    
+  
+  }
+  .bt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #img-modal-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  }
+  
+  #img-modal-btn:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  }

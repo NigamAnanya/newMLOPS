@@ -9,26 +9,31 @@
     <link rel="stylesheet" href="styles.css">
     <!-- <script src="script.js"></script> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    
+    <script src="script.js"></script>
+
     <style>
         /* Default Styles */
 
         .meet-guest {
-            text-align: center; 
-            margin-top: 75px;
-          }
-          
-          .meet-guest h2 {
+            text-align: center;
+            margin-top: 95px;
+        }
+
+        .meet-guest h2 {
             font-size: 28px;
             text-transform: uppercase;
-            position: relative; 
+            position: relative;
             display: inline-block;
+
             background: linear-gradient(to right, #a975dd, #6449c7);
+
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; 
-          }
-          
-          .meet-guest h2::before {
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meet-guest h2::before {
             content: '';
             position: absolute;
             left: 50%;
@@ -36,8 +41,64 @@
             transform: translateX(-50%);
             width: 60%;
             height: 3px;
-            background: linear-gradient(to right, #d650eb, #ff9472); 
-          }
+            background: linear-gradient(to right, #d650eb, #ff9472);
+        }
+
+        .Event .insights {
+            text-align: center;
+            margin-top: 75px;
+        }
+
+        .Event .insights h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(to right, #6a26ad, #1d143a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .Event .insights h2::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #d650eb, #ff9472);
+        }
+
+
+        .workshop-bullets {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .workshop-bullets li {
+            padding: 20px;
+            background: #f5f5f513;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #ddd;
+        }
+
+        .workshop-bullets li span {
+            display: inline-block;
+            animation: slideUp 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
 
         .banner {
             display: flex;
@@ -71,13 +132,11 @@
             border-radius: 50%;
             margin-top: 100px;
             border: 10px solid transparent;
-            background: 
-              linear-gradient(pink, orange, purple) 
-              padding-box, 
-              linear-gradient(to right, pink, orange, purple)
-              border-box;
+            background:
+                linear-gradient(pink, orange, purple) padding-box,
+                linear-gradient(to right, pink, orange, purple) border-box;
             background-origin: border-box;
-            background-clip: content-box, border-box; 
+            background-clip: content-box, border-box;
         }
 
         /* Smartphone Styles */
@@ -86,6 +145,7 @@
 
             .banner {
                 height: 400px;
+
             }
 
             .banner img {
@@ -104,43 +164,44 @@
             }
 
             .grid-2 img {
-                margin-left: 30px;
+
                 width: 250px;
                 height: 250px;
                 margin-top: 0px;
                 border: 10px solid;
-  border-image: linear-gradient(to right, pink, orange, purple);
-  border-image-slice: 1;
+                border-image: linear-gradient(to right, pink, orange, purple);
+                border-image-slice: 1;
 
             }
 
         }
+
         .bullets {
-            list-style: none; 
+            list-style: none;
             margin-left: 0;
-          }
-          
-          .bullets li {
+        }
+
+        .bullets li {
             position: relative;
-            padding-left: 20px; 
+            padding-left: 20px;
             font-size: 19px;
             font-family: sans-serif;
             color: aliceblue;
-            
-          }
-          
-          .bullets li:before {
+
+        }
+
+        .bullets li:before {
             content: "";
             position: absolute;
             left: 0;
             top: 8px;
-            
+
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            
+
             background: linear-gradient(to right, purple, pink);
-          }
+        }
     </style>
 </head>
 
@@ -293,8 +354,8 @@
     </div>
 
     <div class="meet-guest">
-        <h2>Meet our Guest</h2> 
-      </div>
+        <h2>Meet our Guest</h2>
+    </div>
 
     <div class="grid-2">
 
@@ -303,29 +364,71 @@
         </div>
 
         <div>
-            
+
             <ul class="bullets">
-                <li><b>Meet Our Expert:</b> Join our workshop led by a seasoned professional in demand forecasting and inventory management.
+                <li><b>Meet Our Expert:</b> Join our workshop led by a seasoned professional in demand forecasting and
+                    inventory management.
                 </li>
-                <li><b>Proven Success:</b>Learn from someone who achieved remarkable results, boosting SKU sell-through and reducing stockouts.</li>
-                <li><b>Bridging Techniques:</b>Gain insights into blending traditional and modern FMCG strategies for success.</li>
-              </ul>
-            
+                <li><b>Proven Success:</b>Learn from someone who achieved remarkable results, boosting SKU sell-through
+                    and reducing stockouts.</li>
+                <li><b>Bridging Techniques:</b>Gain insights into blending traditional and modern FMCG strategies for
+                    success.</li>
+            </ul>
+
+        </div>
+
+        <div class="meet-guest">
+            <h2>About Event</h2>
         </div>
         <div class="Event insights">
          <h2>About Event</h2> 
           </div>
         <div>
             <ul class="bullets">
-                <li><b>About Event</b> Join our workshop led by a seasoned professional in demand forecasting and inventory management.
-                    <p>Introduce students to the best practices of utilizing cloud services for machine learning.
-                        Offer real-world insights into industry-level machine learning operations.
-                        Provide an immersive environment for in-depth exploration of MLOps.</p>
-              </ul>
-            
+                <li><b>Meet Our Expert:</b> Join our workshop led by a seasoned professional in demand forecasting and
+                    inventory management.
+                </li>
+                <li><b>Proven Success:</b>Learn from someone who achieved remarkable results, boosting SKU sell-through
+                    and reducing stockouts.</li>
+                <li><b>Bridging Techniques:</b>Gain insights into blending traditional and modern FMCG strategies for
+                    success.</li>
+            </ul>
+
+
         </div>
 
     </div>
+
+    <!-- Button to trigger modal -->
+    <div class="bt"><button id="img-modal-btn">Register</button></div>
+    
+
+    <!-- Modal container -->
+    <div id="img-modal" class="modal">
+
+        <!-- Close button -->
+        <span class="close">×</span>
+
+        <!-- Modal content -->
+        <img class="modal-content" id="img01" src="./images/Pay2.jpeg">
+
+        <!-- Modal caption -->
+        <div id="caption"></div>
+    </div>
+    <script>// Get modal, image and close button
+        var modal = document.getElementById('img-modal');
+        var img = document.getElementById('img01');
+        var closeBtn = document.getElementsByClassName('close')[0];
+
+        // Open modal when button clicked
+        document.getElementById('img-modal-btn').onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Close modal when close button clicked
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }</script>
 
 
     <!-- </div> -->
